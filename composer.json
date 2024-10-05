@@ -1,0 +1,78 @@
+{
+    "name": "ntoufoudis/laravel_ocr",
+    "description": "Laravel Optical Character Reader (OCR) package using different OCR engines like Tesseract.",
+    "keywords": [
+        "laravel ocr",
+        "laravelocr",
+        "ocr",
+        "laravel tesseract"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/ntoufoudis/laravel-ocr/issues",
+        "source": "https://github.com/ntoufoudis/laravel-ocr"
+    },
+    "authors": [
+        {
+            "name": "Vasileios Ntoufoudis",
+            "email": "info@ntoufoudis.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2.0",
+        "illuminate/support": "^11.0",
+        "illuminate/console": "^11.0",
+        "illuminate/filesystem": "^11.0",
+        "illuminate/validation": "^11.0",
+        "symfony/console": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ntoufoudis\\LaravelOcr\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ntoufoudis\\LaravelOcr\\LaravelOcrServiceProvider"
+            ],
+            "aliases": {
+                "Ocr": "Ntoufoudis\\LaravelOcr\\Facades\\Ocr"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve --ansi"
+        ],
+        "lint": [
+            "@php vendor/bin/phpstan analyse --verbose --ansi"
+        ]
+    }
+}
