@@ -9,7 +9,7 @@ class Tesseract extends OcrAbstract
     public function scan($imagePath, $lang = null)
     {
         if ($lang === null) {
-            $lang = env('OCR_LANG', 'en');
+            $lang = env('OCR_LANG', 'eng');
         }
 
         $this->setImagePath($imagePath);
@@ -18,7 +18,7 @@ class Tesseract extends OcrAbstract
         $executable = config('tesseract.executable', 'tesseract');
         $langParam = ($lang !== null) ? ' -l ' . $lang : '';
 
-        $command = trim($executable . $langParam . ' ' . $imagePath) . 'stdout quit';
+        $command = trim($executable . $langParam . ' ' . $imagePath) . ' stdout quit';
 
         return $shell->execute($command);
     }
