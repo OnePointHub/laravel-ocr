@@ -65,6 +65,9 @@
         }
     },
     "scripts": {
+        "post-install-cmd": [
+            "@php artisan tesseract:check"
+        ],
         "lint": [
             "@php vendor/bin/phpstan analyse --verbose --ansi"
         ],
