@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install Tesseract
-        run: apt install tesseract-ocr
+        run: sudo apt-get install tesseract-ocr
 
       - name: Checkout
         uses: actions/checkout@v4
