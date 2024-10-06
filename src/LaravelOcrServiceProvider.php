@@ -29,14 +29,8 @@ class LaravelOcrServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
-
-        $this->loadViewsFrom(__DIR__.'/../views/laravel-ocr', 'laravel-ocr');
-
         $this->publishes([
             __DIR__.'/../config/ocr.php' => config_path('ocr.php'),
-            __DIR__.'/../resources/' => resource_path('laravel-ocr'),
-            __DIR__.'/../views/laravel-ocr' => resource_path('views/laravel-ocr'),
         ]);
 
 
