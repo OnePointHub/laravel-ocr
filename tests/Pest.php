@@ -46,3 +46,5 @@ function something()
 {
     // ..
 }
+
+exec('rm -rf ' . __DIR__ . '/../vendor/hamcrest/hamcrest-php/tests');
