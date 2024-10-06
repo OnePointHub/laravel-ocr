@@ -33,3 +33,10 @@ Then publish this package
 ```
 php artisan vendor:publish --provider=Ntoufoudis\\LaravelOcr\\LaravelOcrServiceProvider
 ```
+
+## Usage
+
+### Tesseract
+
+#### Check if Tesseract is installed in your system
+```php artisan tesseract:check```

@@ -2,7 +2,8 @@
 
 namespace Ntoufoudis\LaravelOcr;
 
-use Ntoufoudis\LaravelOcr\Commands\ImageParsing;
+use Ntoufoudis\LaravelOcr\Console\ImageParsing;
+use Ntoufoudis\LaravelOcr\Console\Tesseract;
 use Ntoufoudis\LaravelOcr\Services\OcrAbstract;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,6 +19,7 @@ class LaravelOcrServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 ImageParsing::class,
+                Tesseract::class,
             ]);
         }
     }

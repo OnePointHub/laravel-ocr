@@ -1,6 +1,6 @@
 <?php
 
-namespace Ntoufoudis\LaravelOcr\Commands;
+namespace Ntoufoudis\LaravelOcr\Console;
 
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Ntoufoudis\LaravelOcr\Services\OcrAbstract;
