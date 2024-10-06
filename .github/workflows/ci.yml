@@ -8,14 +8,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up PHP 8.2
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
+          coverage: xdebug
+
       - name: Install dependencies
-        run: composer self-update && composer install && composer dump-autoload
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
       - name: Run tests and collect coverage
         run: vendor/bin/pest --coverage --coverage-clover coverage.xml .
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         env:
