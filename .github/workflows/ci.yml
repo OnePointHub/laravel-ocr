@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: composer self-update && composer install && composer dump-autoload
       - name: Run tests and collect coverage
-        run: vendor/bin/pest --coverage coverage.xml .
+        run: vendor/bin/pest --coverage --coverage-clover coverage.xml .
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         env:
