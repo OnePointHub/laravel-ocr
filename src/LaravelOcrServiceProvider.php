@@ -3,7 +3,6 @@
 namespace Ntoufoudis\LaravelOcr;
 
 use Ntoufoudis\LaravelOcr\Commands\ImageParsing;
-use Ntoufoudis\LaravelOcr\Controllers\OcrController;
 use Ntoufoudis\LaravelOcr\Services\OcrAbstract;
 use Illuminate\Support\ServiceProvider;
 
@@ -28,7 +27,7 @@ class LaravelOcrServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 
@@ -40,7 +39,6 @@ class LaravelOcrServiceProvider extends ServiceProvider
             __DIR__.'/../views/laravel-ocr' => resource_path('views/laravel-ocr'),
         ]);
 
-        $this->app->make(OcrController::class);
 
         $this->app->singleton(OcrAbstract::class, function () {
             return $this->resolvedEngineClass();

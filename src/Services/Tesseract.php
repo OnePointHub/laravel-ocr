@@ -4,9 +4,9 @@ namespace Ntoufoudis\LaravelOcr\Services;
 
 class Tesseract extends OcrAbstract
 {
-    protected $command;
+    protected string $command;
 
-    public function scan($imagePath, $lang = null)
+    public function scan($imagePath, $lang = null): string
     {
         if ($lang === null) {
             $lang = env('OCR_LANG', 'eng');
@@ -15,10 +15,11 @@ class Tesseract extends OcrAbstract
         $this->setImagePath($imagePath);
         $shell = new Shell();
 
-        $executable = config('tesseract.executable', 'tesseract');
-        $langParam = ($lang !== null) ? ' -l ' . $lang : '';
+        $ocrEngine = config('ocr.ocr_engine', 'tesseract');
 
-        $command = trim($executable . $langParam . ' ' . $imagePath) . ' stdout quit';
+        $executable = config("ocr.engines.$ocrEngine.executable", 'tesseract');
+        $langParam = ($lang !== null) ? ' -l ' . $lang : '';
+        $command = trim($executable . $langParam . ' ' . $imagePath) . ' stdout';
 
         return $shell->execute($command);
     }

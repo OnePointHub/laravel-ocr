@@ -6,32 +6,32 @@ use Symfony\Component\HttpFoundation\File\File;
 
 abstract class OcrAbstract
 {
-    protected $imagePath;
+    protected string $imagePath;
 
-    protected $image;
+    protected File $image;
 
-    protected $outputText;
+    protected string $outputText;
 
-    public abstract function scan($imagePath);
+    abstract public function scan($imagePath);
 
-    public function setImagePath($imagePath)
+    public function setImagePath($imagePath): File
     {
         $this->image = new File($imagePath);
         $this->imagePath = $imagePath;
         return $this->image;
     }
 
-    public function getImagePath()
+    public function getImagePath(): string
     {
         return $this->imagePath;
     }
 
-    public function getImage()
+    public function getImage(): File
     {
         return $this->image;
     }
 
-    public function getOutput()
+    public function getOutput(): string
     {
         return $this->outputText;
     }
