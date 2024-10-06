@@ -1,6 +1,6 @@
 [![Latest Stable Version](https://poser.pugx.org/ntoufoudis/laravel_ocr/version.svg)](https://packagist.org/packages/ntoufoudis/laravel_ocr)
-[![License](http://poser.pugx.org/ntoufoudis/laravel_ocr/license)](https://packagist.org/packages/ntoufoudis/laravel_ocr)
-[![Total Downloads](http://poser.pugx.org/ntoufoudis/laravel_ocr/downloads)](https://packagist.org/packages/ntoufoudis/laravel_ocr)
+[![License](https://poser.pugx.org/ntoufoudis/laravel_ocr/license)](https://packagist.org/packages/ntoufoudis/laravel_ocr)
+[![Total Downloads](https://poser.pugx.org/ntoufoudis/laravel_ocr/downloads)](https://packagist.org/packages/ntoufoudis/laravel_ocr)
 
 ## Laravel-Ocr
 Laravel Optical Character Reader (OCR) package using ocr engines like [Tesseract](https://github.com/tesseract-ocr/tesseract) under the hood.
