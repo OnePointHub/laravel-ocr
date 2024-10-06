@@ -59,15 +59,9 @@
     "autoload-dev": {
         "psr-4": {
             "Ntoufoudis\\LaravelOcr\\Tests\\": "tests",
-            "Workbench\\App\\": "workbench/app/",
-            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
-            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
         }
     },
     "scripts": {
-        "post-install-cmd": [
-            "@php artisan tesseract:check"
-        ],
         "lint": [
             "@php vendor/bin/phpstan analyse --verbose --ansi"
         ],
