@@ -2,8 +2,7 @@
 
 namespace Ntoufoudis\LaravelOcr\Console;
 
-use Illuminate\Contracts\Container\BindingResolutionException;
-use Ntoufoudis\LaravelOcr\Services\OcrAbstract;
+use Ntoufoudis\LaravelOcr\Facades\Ocr;
 use Illuminate\Console\Command;
 
 class ImageParsing extends Command
@@ -13,40 +12,38 @@ class ImageParsing extends Command
      *
      * @var string
      */
-    protected $signature = 'image:parse {imagePath}';
+    protected $signature = 'image:parse {imagePaths* : List of Image paths}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Parse image using absolute path';
+    protected $description = 'Parse images using absolute path';
 
-    protected string $imagePath;
-
-    /**
-     * ImageParsing constructor.
-     *
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
+    protected array $imagePaths = [];
 
     /**
      * Execute the console command.
      *
-     * @return mixed
-     * @throws BindingResolutionException
      */
-    public function handle()
+    public function handle(): void
     {
-        $this->imagePath = $this->argument('imagePath');
-        $ocr = app()->make(OcrAbstract::class);
-        $parsedText = $ocr->scan($this->imagePath);
+        $parsedText = [];
+        foreach ($this->argument('imagePaths') as $imagePath) {
+            $this->imagePaths[] = $imagePath;
+        }
+
+        foreach ($this->imagePaths as $imagePath) {
+            $parsedText[] = Ocr::scan($imagePath);
+        }
         $this->info('=================== Parsed Result ========================');
-        $this->info('__________________________________________________________');
-        $this->info($parsedText);
-        $this->info('__________________________________________________________');
+        foreach ($parsedText as $text) {
+            $this->info('__________________________________________________________');
+            $this->newLine();
+            $this->info($text);
+            $this->newLine();
+            $this->info('__________________________________________________________');
+        }
     }
 }

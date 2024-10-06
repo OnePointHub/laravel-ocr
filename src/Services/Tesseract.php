@@ -19,7 +19,7 @@ class Tesseract extends OcrAbstract
 
         $executable = config("ocr.engines.$ocrEngine.executable", 'tesseract');
         $langParam = ($lang !== null) ? ' -l ' . $lang : '';
-        $command = trim($executable . $langParam . ' ' . $imagePath) . ' stdout';
+        $command = trim($executable . $langParam . ' ' . $imagePath) . ' stdout quiet';
 
         return $shell->execute($command);
     }
