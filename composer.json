@@ -58,7 +58,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Ntoufoudis\\LaravelOcr\\Tests\\": "tests",
+            "Ntoufoudis\\LaravelOcr\\Tests\\": "tests"
         }
     },
     "scripts": {
