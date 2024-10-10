@@ -1,8 +1,7 @@
 # Laravel-Ocr
-[![Latest Stable Version](https://poser.pugx.org/ntoufoudis/laravel_ocr/v)](https://packagist.org/packages/ntoufoudis/laravel_ocr)
-[![License](https://poser.pugx.org/ntoufoudis/laravel_ocr/license)](https://packagist.org/packages/ntoufoudis/laravel_ocr)
-[![Total Downloads](https://poser.pugx.org/ntoufoudis/laravel_ocr/downloads)](https://packagist.org/packages/ntoufoudis/laravel_ocr)
-[![codecov](https://codecov.io/github/ntoufoudis/laravel-ocr/branch/main/graph/badge.svg?token=ZOD16GJW04)](https://codecov.io/github/ntoufoudis/laravel-ocr)
+[![Latest Stable Version](https://poser.pugx.org/onepointhub/laravel_ocr/v)](https://packagist.org/packages/onepointhub/laravel_ocr)
+[![License](https://poser.pugx.org/onepointhub/laravel_ocr/license)](https://packagist.org/packages/onepointhub/laravel_ocr)
+[![Total Downloads](https://poser.pugx.org/onepointhub/laravel_ocr/downloads)](https://packagist.org/packages/onepointhub/laravel_ocr)
 
 ## Table of Contents
 * [Laravel-Ocr](#laravel-ocr)
@@ -39,7 +38,7 @@ Make sure from the command line you have the `tesseract` command available.
 Install the package
 
 ```shell
-composer require ntoufoudis/laravel_ocr
+composer require onepointhub/laravel_ocr
 ```
 
 Then publish this package
