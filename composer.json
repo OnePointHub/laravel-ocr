@@ -1,5 +1,5 @@
 {
-    "name": "ntoufoudis/laravel_ocr",
+    "name": "onepointhub/laravel_ocr",
     "description": "Laravel Optical Character Reader (OCR) package using different OCR engines like Tesseract.",
     "keywords": [
         "laravel ocr",
@@ -10,8 +10,8 @@
     "type": "library",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/ntoufoudis/laravel-ocr/issues",
-        "source": "https://github.com/ntoufoudis/laravel-ocr"
+        "issues": "https://github.com/onepointhub/laravel-ocr/issues",
+        "source": "https://github.com/onepointhub/laravel-ocr"
     },
     "authors": [
         {
@@ -29,16 +29,16 @@
     },
     "autoload": {
         "psr-4": {
-            "Ntoufoudis\\LaravelOcr\\": "src/"
+            "OnePointHub\\LaravelOcr\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ntoufoudis\\LaravelOcr\\LaravelOcrServiceProvider"
+                "OnePointHub\\LaravelOcr\\LaravelOcrServiceProvider"
             ],
             "aliases": {
-                "Ocr": "Ntoufoudis\\LaravelOcr\\Facades\\Ocr"
+                "Ocr": "OnePointHub\\LaravelOcr\\Facades\\Ocr"
             }
         }
     },
@@ -58,7 +58,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Ntoufoudis\\LaravelOcr\\Tests\\": "tests"
+            "OnePointHub\\LaravelOcr\\Tests\\": "tests"
         }
     },
     "scripts": {
