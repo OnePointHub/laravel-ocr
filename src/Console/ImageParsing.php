@@ -1,8 +1,8 @@
 <?php
 
-namespace Ntoufoudis\LaravelOcr\Console;
+namespace OnePointHub\LaravelOcr\Console;
 
-use Ntoufoudis\LaravelOcr\Facades\Ocr;
+use OnePointHub\LaravelOcr\Facades\Ocr;
 use Illuminate\Console\Command;
 
 class ImageParsing extends Command

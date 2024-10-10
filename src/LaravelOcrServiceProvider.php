@@ -1,10 +1,10 @@
 <?php
 
-namespace Ntoufoudis\LaravelOcr;
+namespace OnePointHub\LaravelOcr;
 
-use Ntoufoudis\LaravelOcr\Console\ImageParsing;
-use Ntoufoudis\LaravelOcr\Console\Tesseract;
-use Ntoufoudis\LaravelOcr\Services\OcrAbstract;
+use OnePointHub\LaravelOcr\Console\ImageParsing;
+use OnePointHub\LaravelOcr\Console\Tesseract;
+use OnePointHub\LaravelOcr\Services\OcrAbstract;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelOcrServiceProvider extends ServiceProvider
@@ -47,7 +47,7 @@ class LaravelOcrServiceProvider extends ServiceProvider
 
     private function resolvedEngineClass()
     {
-        $namespace = 'Ntoufoudis\LaravelOcr\Services';
+        $namespace = 'OnePointHub\LaravelOcr\Services';
         $ocrEngine = config('ocr.ocr_engine');
         $engineClass = config("ocr.ocr.engines.{$ocrEngine}.class", 'Tesseract');
         $fullClassPath = "$namespace\\$engineClass";

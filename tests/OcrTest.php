@@ -1,6 +1,6 @@
 <?php
 
-use Ntoufoudis\LaravelOcr\Facades\Ocr;
+use OnePointHub\LaravelOcr\Facades\Ocr;
 
 it('can get the text from an image', function () {
     $imagePath = __DIR__ . '/../resources/sampleImages/1.jpg';

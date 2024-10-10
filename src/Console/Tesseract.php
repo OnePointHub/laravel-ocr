@@ -1,9 +1,9 @@
 <?php
 
-namespace Ntoufoudis\LaravelOcr\Console;
+namespace OnePointHub\LaravelOcr\Console;
 
 use Illuminate\Console\Command;
-use Ntoufoudis\LaravelOcr\Services\Shell;
+use OnePointHub\LaravelOcr\Services\Shell;
 
 class Tesseract extends Command
 {

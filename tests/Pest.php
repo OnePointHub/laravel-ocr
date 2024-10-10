@@ -1,6 +1,6 @@
 <?php
 
-use Ntoufoudis\LaravelOcr\Tests\PackageTestCase;
+use OnePointHub\LaravelOcr\Tests\PackageTestCase;
 
 uses(PackageTestCase::class)->in(__DIR__);
 /*

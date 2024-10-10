@@ -1,6 +1,6 @@
 <?php
 
-namespace Ntoufoudis\LaravelOcr\Facades;
+namespace OnePointHub\LaravelOcr\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

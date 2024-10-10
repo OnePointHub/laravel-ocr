@@ -1,8 +1,8 @@
 <?php
 
-namespace Ntoufoudis\LaravelOcr\Tests;
+namespace OnePointHub\LaravelOcr\Tests;
 
-use Ntoufoudis\LaravelOcr\LaravelOcrServiceProvider;
+use OnePointHub\LaravelOcr\LaravelOcrServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class PackageTestCase extends TestCase

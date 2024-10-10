@@ -1,6 +1,6 @@
 <?php
 
-namespace Ntoufoudis\LaravelOcr\Services;
+namespace OnePointHub\LaravelOcr\Services;
 
 class Tesseract extends OcrAbstract
 {
