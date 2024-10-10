@@ -1,7 +1,6 @@
 # Laravel-Ocr
 [![Latest Stable Version](https://poser.pugx.org/onepointhub/laravel_ocr/v)](https://packagist.org/packages/onepointhub/laravel_ocr)
 [![License](https://poser.pugx.org/onepointhub/laravel_ocr/license)](https://packagist.org/packages/onepointhub/laravel_ocr)
-[![Total Downloads](https://poser.pugx.org/onepointhub/laravel_ocr/downloads)](https://packagist.org/packages/onepointhub/laravel_ocr)
 
 ## Table of Contents
 * [Laravel-Ocr](#laravel-ocr)
